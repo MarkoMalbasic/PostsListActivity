@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/kitchen"
+    tools:context=".Fragments.FoodFragments.MainsFragment">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mainsTabLayout"
+        style="@style/MyTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mainsTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mains" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/sharingMainsTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mains for Sharing" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/sidesTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sides" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mainsViewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainsTabLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home"
+    tools:context=".Fragments.HomeFragment">
+
+    <ScrollView
+        android:id="@+id/scrollViewHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFood"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/cycladic"
+                android:text="Food Bible"
+                android:textAllCaps="false"
+                android:textColor="#C9942A"
+                android:textSize="20dp"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView4"
+                app:rippleColor="#ffffff"
+                app:strokeColor="#C9942A"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBeverage"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/cycladic"
+                android:text="Beverage Bible"
+                android:textColor="#C9942A"
+                android:textSize="20dp"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnFood"
+                app:rippleColor="#ffffff"
+                app:strokeColor="#C9942A"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnService"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/cycladic"
+                android:text="Service Sequence"
+                android:textColor="#C9942A"
+                android:textSize="20dp"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnBeverage"
+                app:rippleColor="#ffffff"
+                app:strokeColor="#C9942A"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfile"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/cycladic"
+                android:text="Profile"
+                android:textColor="#C9942A"
+                android:textSize="20dp"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnService"
+                app:rippleColor="#ffffff"
+                app:strokeColor="#C9942A"
+                app:strokeWidth="2dp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="163dp"
+                android:layout_height="124dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/avli"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/cycladic"
+                android:text="Our Story"
+                android:textColor="#C9942A"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="Avli by tashas is a testament to the resilient culture of Athens, abundant in sophistication, a soulful spirit and abundant in arts and culture. Our Greek inspired cuisine caters for every palate in this beautifully designed space reminiscent of the rustic courtyards of the Mediterranean. "
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeRCView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</FrameLayout>
